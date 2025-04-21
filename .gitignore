@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+*.log
+
+*~          # vim
+*.swp       # vim
+*.tmp       # vim
+.idea
+.vscode
+
+node_modules
+build
+coverage

@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware/"
+     xml:base="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontohardware="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#hasBrand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#hasBrand">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#hasCacheMemory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#hasCacheMemory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPU"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheMemory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#hasCoresArchitecture -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#hasCoresArchitecture">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPU"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoresArchitecture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#hasFamily -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#hasFamily">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfGPUs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfRAMs"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Cooling"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RAM"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Storage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Architecture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Architecture">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProductsProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfGPUs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#BaseClock -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#BaseClock">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoreAttribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#BoostClock -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#BoostClock">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoreAttribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheAttribute -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoreAttribute -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoreAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoresArchitecture"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoreNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoreNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoreAttribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProductsProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProductsProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FormFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FormFactor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Format -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Format">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProductsProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfRAMs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#L1Size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#L1Size">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheAttribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#L2Size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#L2Size">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheAttribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#L3Size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#L3Size">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheAttribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Litography -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Litography">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProductsProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfGPUs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MaxRAM -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MaxRAM">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Model -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Model">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PCIGen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PCIGen">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProductsProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RAMSlots -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RAMSlots">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RamGen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RamGen">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProductsProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfGPUs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfRAMs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Socket -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Socket">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProductsProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#TDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#TDP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfGPUs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ThreadNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ThreadNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoreAttribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Architectures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Architectures"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheMemory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheMemory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Architectures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Case -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Case">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Cooling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Cooling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoresArchitecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoresArchitecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Architectures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ExpansionArchitecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ExpansionArchitecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Architectures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfGPUs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfGPUs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfMBs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfRAMs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfRAMs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfProducts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Motherboard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Motherboard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RAM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Storage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Storage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
+        <ontohardware:Name>AMD</ontohardware:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FamilyOfCPUs"/>
+        <ontohardware:hasBrand rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMD"/>
+        <ontohardware:Architecture rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Zen 4</ontohardware:Architecture>
+        <ontohardware:Litography rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontohardware:Litography>
+        <ontohardware:Name>Ryzen 7000</ontohardware:Name>
+        <ontohardware:Socket>AM5</ontohardware:Socket>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700X -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700X">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPU"/>
+        <ontohardware:hasCacheMemory rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCacheMemory"/>
+        <ontohardware:hasCoresArchitecture rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCoreArchitecture"/>
+        <ontohardware:hasFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7000"/>
+        <ontohardware:MaxRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">128</ontohardware:MaxRAM>
+        <ontohardware:Model>7700X</ontohardware:Model>
+        <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">105</ontohardware:TDP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCacheMemory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCacheMemory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CacheMemory"/>
+        <ontohardware:L1Size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">512</ontohardware:L1Size>
+        <ontohardware:L2Size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontohardware:L2Size>
+        <ontohardware:L3Size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</ontohardware:L3Size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCoreArchitecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCoreArchitecture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CoresArchitecture"/>
+        <ontohardware:BaseClock rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</ontohardware:BaseClock>
+        <ontohardware:BoostClock rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.4</ontohardware:BoostClock>
+        <ontohardware:CoreNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</ontohardware:CoreNumber>
+        <ontohardware:ThreadNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16</ontohardware:ThreadNumber>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <ontohardware:Model></ontohardware:Model>
+    </rdf:Description>
+    <rdf:Description>
+        <ontohardware:Model></ontohardware:Model>
+    </rdf:Description>
+    <rdf:Description>
+        <ontohardware:Model></ontohardware:Model>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
