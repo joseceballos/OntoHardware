@@ -1,6 +1,6 @@
 import { Controller } from '@nestjs/common';
-import { FusekiService } from '../../fuseki/fuseki.service';
-import { BaseController } from '../base/BaseController';
+import { FusekiService } from '../fuseki/fuseki.service';
+import { BaseController } from './base/BaseController';
 
 @Controller('ram')
 export class RamController extends BaseController {
