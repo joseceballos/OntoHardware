@@ -8,23 +8,15 @@ import {
 } from '@nestjs/common';
 import { FILTER_CONFIG } from 'src/data/filter.config';
 import { FusekiService } from 'src/fuseki/fuseki.service';
-import { buildNumericFilterQuery } from 'src/helpers/sparql.builder';
-
-type ComparatorKey = 'gt' | 'lt' | 'ge' | 'le' | 'eq';
-type ComparisonSymbol = '>' | '<' | '>=' | '<=' | '=';
-
-const COMPARATOR_MAP: Record<ComparatorKey, ComparisonSymbol> = {
-  gt: '>',
-  lt: '<',
-  ge: '>=',
-  le: '<=',
-  eq: '=',
-};
+import { buildFilterQuery, FilterParams } from 'src/helpers/sparql.builder';
+import {
+  ComparatorKey,
+  comparatorKeyIntoComparatorSymbol,
+} from 'src/helpers/types.converter';
 
 interface FilterResponse {
   uri: string;
   id: string;
-  value: number;
   profile?: string;
 }
 
@@ -49,26 +41,26 @@ export class FilterController {
       );
     }
 
-    const comparatorSymbol = COMPARATOR_MAP[op];
-
-    const sparql = buildNumericFilterQuery(
-      filterData.componentType,
-      filterData.profile,
-      filterData.propertyName,
+    const params: FilterParams = {
+      componentType: filterData.componentType,
+      profile: filterData.profile,
+      propertyName: filterData.propertyName,
+      propertyType: filterData.propertyType,
+      comparatorSymbol: comparatorKeyIntoComparatorSymbol(op),
       propertyValue,
-      comparatorSymbol,
-      {
-        valueVar: `${filterData.propertyLabel}Raw`,
-        isInteger: filterData.isInteger,
-      },
-    );
+    };
+
+    console.log(params);
+
+    const sparql = buildFilterQuery(params);
+
+    console.log(sparql);
 
     try {
       const res = await this.fuseki.select(sparql);
       return res.results.bindings.map((b) => ({
         uri: b.item.value,
         id: b.id.value,
-        value: parseInt(b.value.value, 10),
         profile: b.profile?.value,
       }));
     } catch {

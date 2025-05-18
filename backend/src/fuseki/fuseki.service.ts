@@ -6,7 +6,7 @@ import { SparqlSelect } from './dto/sparql-select.dto';
 @Injectable()
 export class FusekiService {
   private readonly endpoint =
-    process.env.FUSEKI_QUERY_URL ?? 'http://localhost:3030/dataset/query';
+    process.env.FUSEKI_QUERY_URL ?? 'http://localhost:3030/dataset/sparql';
 
   constructor(private httpService: HttpService) {}
 

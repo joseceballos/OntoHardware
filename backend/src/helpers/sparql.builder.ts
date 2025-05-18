@@ -1,36 +1,43 @@
 import { PREFIXES } from './sparql.prefixes';
+import { ComparatorSymbol } from './types.converter';
 
-export function buildNumericFilterQuery(
-  componentType: string,
-  profilePath: string | null,
-  filterProperty: string,
-  filterValue: number,
-  comparisonSymbol: '>' | '<' | '>=' | '<=' | '=',
-  opts: {
-    valueVar?: string;
-    isInteger?: boolean;
-  } = {},
-): string {
-  const { valueVar = 'valRaw', isInteger = true } = opts;
-  const numType = isInteger ? 'integer' : 'decimal';
+export type PropertyType = 'integer' | 'decimal' | 'string' | 'objectId';
+
+export interface FilterParams {
+  componentType: string;
+  profile: string | null;
+  propertyName: string;
+  propertyType: PropertyType;
+  comparatorSymbol?: ComparatorSymbol;
+  propertyValue: string | number;
+}
+
+export function buildFilterQuery(params: FilterParams): string {
+  if (params.propertyType === 'objectId') {
+    return buildObjectFilterQuery(params);
+  } else {
+    return buildDataFilterQuery(params);
+  }
+}
+
+function buildObjectFilterQuery(params: FilterParams): string {
+  const { componentType, profile, propertyName, propertyValue } = params;
 
   const select = `
     ?item
-    ${profilePath ? '?profile' : ''}
-    (xsd:${numType}(str(?${valueVar})) AS ?value)
+    ${profile ? '?profile' : ''}
     (STRAFTER(STR(?item), "#") AS ?id)`;
 
-  const where = profilePath
+  const where = profile
     ? `
       ?item rdf:type onto:${componentType} ;
-        onto:has${profilePath} ?profile .
-      ?profile onto:${filterProperty} ?${valueVar} .`
+        onto:has${profile} ?profile .
+      ?profile onto:has${propertyName} ?valObject .`
     : `
       ?item rdf:type onto:${componentType} ;
-        onto:${filterProperty} ?${valueVar} .`;
+        onto:has${propertyName} ?valObject .`;
 
-  const filter = `
-    xsd:${numType}(str(?${valueVar})) ${comparisonSymbol} ${filterValue}`;
+  const filter = `FILTER(?valObject = onto:${propertyValue})`;
 
   return `
     ${PREFIXES}
@@ -38,7 +45,53 @@ export function buildNumericFilterQuery(
       ${select}
     WHERE {
       ${where}
-      FILTER(${filter})
+      ${filter}
+    }
+    ORDER BY ?item`;
+}
+
+function buildDataFilterQuery(params: FilterParams): string {
+  const {
+    componentType,
+    profile,
+    propertyName,
+    propertyValue,
+    propertyType,
+    comparatorSymbol,
+  } = params;
+
+  let selectType: string;
+  let filter: string;
+
+  if (['integer', 'decimal'].includes(propertyType)) {
+    selectType = `(xsd:${propertyType}(str(?valRaw)) AS ?value)`;
+    filter = `FILTER(xsd:${propertyType}(str(?valRaw)) ${comparatorSymbol} ${propertyValue})`;
+  } else {
+    selectType = `((str(?valRaw)) AS ?value)`;
+    filter = `FILTER(str(?valRaw) ${comparatorSymbol} ${propertyValue})`;
+  }
+
+  const select = `?item
+    ${profile ? '?profile' : ''}
+    ${selectType}
+    (STRAFTER(STR(?item), "#") AS ?id)`;
+
+  const where = profile
+    ? `
+      ?item rdf:type onto:${componentType} ;
+        onto:has${profile} ?profile .
+      ?profile onto:${propertyName} ?valRaw .`
+    : `
+      ?item rdf:type onto:${componentType} ;
+        onto:${propertyName} ?valRaw .`;
+
+  return `
+    ${PREFIXES}
+    SELECT
+      ${select}
+    WHERE {
+      ${where}
+      ${filter}
     }
     ORDER BY DESC(?value)  
   `;
