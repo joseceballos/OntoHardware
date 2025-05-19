@@ -3,10 +3,14 @@ import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
 import { SparqlSelect } from './dto/sparql-select.dto';
 
+interface SparqlAsk {
+  boolean: boolean;
+}
+
 @Injectable()
 export class FusekiService {
   private readonly endpoint =
-    process.env.FUSEKI_QUERY_URL ?? 'http://localhost:3030/dataset/sparql';
+    process.env.FUSEKI_QUERY_URL ?? 'http://localhost:3030/dataset/query';
 
   constructor(private httpService: HttpService) {}
 
@@ -22,5 +26,18 @@ export class FusekiService {
       }),
     );
     return data;
+  }
+
+  async ask(sparql: string): Promise<boolean> {
+    const body = new URLSearchParams({ query: sparql }).toString();
+    const { data } = await firstValueFrom(
+      this.httpService.post<SparqlAsk>(this.endpoint, body, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Accept: 'application/sparql-results+json',
+        },
+      }),
+    );
+    return data.boolean;
   }
 }

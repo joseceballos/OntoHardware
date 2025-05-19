@@ -8,10 +8,10 @@ import {
 } from '@nestjs/common';
 import { FILTER_CONFIG } from 'src/data/filter.config';
 import { FusekiService } from 'src/fuseki/fuseki.service';
-import { buildFilterQuery, FilterParams } from 'src/helpers/sparql.builder';
+import { buildFilterQuery, FilterParams } from 'src/helpers/filter.builder';
 import {
   ComparatorKey,
-  comparatorKeyIntoComparatorSymbol,
+  getComparatorSymbolByKey,
 } from 'src/helpers/types.converter';
 
 interface FilterResponse {
@@ -46,7 +46,7 @@ export class FilterController {
       profile: filterData.profile,
       propertyName: filterData.propertyName,
       propertyType: filterData.propertyType,
-      comparatorSymbol: comparatorKeyIntoComparatorSymbol(op),
+      comparatorSymbol: getComparatorSymbolByKey(op),
       propertyValue,
     };
 

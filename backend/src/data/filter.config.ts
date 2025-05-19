@@ -1,4 +1,4 @@
-import { PropertyType } from 'src/helpers/sparql.builder';
+import { PropertyType } from 'src/helpers/filter.builder';
 
 export interface FilterConfig {
   componentKey: 'cpu' | 'gpu' | 'mb' | 'ram';

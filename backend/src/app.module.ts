@@ -8,6 +8,7 @@ import { MbController } from './hardwareComponents/mb.controller';
 import { GpuController } from './hardwareComponents/gpu.controller';
 import { RamController } from './hardwareComponents/ram.controller';
 import { FilterController } from './hardwareComponents/filter.controller';
+import { CompatibilityController } from './hardwareComponents/compatibility.controller';
 
 @Module({
   imports: [HttpModule, FusekiModule],
@@ -18,6 +19,7 @@ import { FilterController } from './hardwareComponents/filter.controller';
     GpuController,
     RamController,
     FilterController,
+    CompatibilityController,
   ],
   providers: [AppService],
 })
