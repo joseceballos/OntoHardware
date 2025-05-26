@@ -3,12 +3,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HttpModule } from '@nestjs/axios';
 import { FusekiModule } from './fuseki/fuseki.module';
-import { CpuController } from './hardwareComponents/cpu.controller';
-import { MbController } from './hardwareComponents/mb.controller';
-import { GpuController } from './hardwareComponents/gpu.controller';
-import { RamController } from './hardwareComponents/ram.controller';
-import { FilterController } from './hardwareComponents/filter.controller';
-import { CompatibilityController } from './hardwareComponents/compatibility.controller';
+import { CpuController } from './controllers/cpu.controller';
+import { MbController } from './controllers/mb.controller';
+import { GpuController } from './controllers/gpu.controller';
+import { RamController } from './controllers/ram.controller';
+import { FilterController } from './controllers/filter.controller';
+import { CompatibilityController } from './controllers/compatibility.controller';
+import { PsuController } from './controllers/psu.controller';
+import { StorageController } from './controllers/storage.controller';
 
 @Module({
   imports: [HttpModule, FusekiModule],
@@ -18,6 +20,8 @@ import { CompatibilityController } from './hardwareComponents/compatibility.cont
     MbController,
     GpuController,
     RamController,
+    PsuController,
+    StorageController,
     FilterController,
     CompatibilityController,
   ],

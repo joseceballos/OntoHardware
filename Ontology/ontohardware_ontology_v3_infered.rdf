@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/josec/ontologies/2025/4/ontoHardware#"
-     xml:base="http://www.semanticweb.org/josec/ontologies/2025/4/ontoHardware"
+<rdf:RDF xmlns="http://www.semanticweb.org/josec/ontologies/2025/3/ontoHardware#"
+     xml:base="http://www.semanticweb.org/josec/ontologies/2025/3/ontoHardware"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,7 +10,7 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:ontohardware="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/josec/ontologies/2025/4/ontoHardware"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontoHardware"/>
     
 
 
@@ -1555,6 +1555,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AM4Socket">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Socket"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>AMD Vermeer AM4</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD Vermeer AM4</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1564,8 +1566,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AM5Socket">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Socket"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
-        <ontohardware:descriptionDP>Raphael AM5</ontohardware:descriptionDP>
-        <ontohardware:valueTypeName>Raphael AM5</ontohardware:valueTypeName>
+        <ontohardware:descriptionDP>AMD Raphael AM5</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD Raphael AM5</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1575,6 +1577,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMDB550Chipset">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>AMD B550</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD B550</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1584,6 +1588,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMDB650Chipset">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>AMD B650</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD B650</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1604,6 +1610,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMDRDNA2GPUArchitecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUArchitectureType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>AMD RDNA 2</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD RDNA 2</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1613,6 +1621,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMDRDNA3GPUArchitecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUArchitectureType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>AMD RDNA 3</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD RDNA 3</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1671,10 +1681,9 @@
         <ontohardware:hasPCIPortType rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Gen5PCIeType"/>
         <ontohardware:slotsAndPortsOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GDDR6XMemoryType"/>
         <ontohardware:slotsAndPortsOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Gen5PCIeType"/>
-        <ontohardware:descriptionDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontohardware:descriptionDP>
+        <ontohardware:descriptionDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontohardware:descriptionDP>
         <ontohardware:descriptionDP>AMD Radeon 7000</ontohardware:descriptionDP>
         <ontohardware:familyName>AMD Radeon 7000</ontohardware:familyName>
-        <ontohardware:lithography rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontohardware:lithography>
         <ontohardware:lithography rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontohardware:lithography>
     </owl:NamedIndividual>
     
@@ -1685,6 +1694,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMDX570Chipset">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>AMD X570</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD X570</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1705,6 +1716,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMDZen3CPUArchitecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUArchitectureType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>AMD Zen 3</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD Zen 3</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1714,8 +1727,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AMDZen4CPUArchitecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUArchitectureType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
-        <ontohardware:descriptionDP>Zen 4</ontohardware:descriptionDP>
-        <ontohardware:valueTypeName>Zen 4</ontohardware:valueTypeName>
+        <ontohardware:descriptionDP>AMD Zen 4</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD Zen 4</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -1879,7 +1892,6 @@
         <ontohardware:CPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCPU"/>
         <ontohardware:CPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7900XCPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
-        <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
@@ -1892,7 +1904,6 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x24DDR57000CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
-        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7900XCPU"/>
@@ -1961,8 +1972,8 @@
         <ontohardware:hasNetworkProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W6B5_1MBNetworkProfile"/>
         <ontohardware:descriptionDP>90MB14L0-M0EAY0</ontohardware:descriptionDP>
         <ontohardware:descriptionDP>ROG STRIX B550-I GAMING</ontohardware:descriptionDP>
+        <ontohardware:model>ROG STRIX B550-I GAMING</ontohardware:model>
         <ontohardware:productId>90MB14L0-M0EAY0</ontohardware:productId>
-        <ontohardware:productId>ROG STRIX B550-I GAMING</ontohardware:productId>
     </owl:NamedIndividual>
     
 
@@ -2026,7 +2037,6 @@
         <ontohardware:CPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPU"/>
         <ontohardware:CPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I914900KCPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
-        <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
@@ -2043,7 +2053,6 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I914900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
-        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
@@ -2125,7 +2134,6 @@
         <ontohardware:CPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I713700KCPU"/>
         <ontohardware:CPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
-        <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
@@ -2140,7 +2148,6 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I713700KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
-        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
@@ -2175,7 +2182,6 @@
         <ontohardware:CPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPU"/>
         <ontohardware:CPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I914900KCPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
-        <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
@@ -2192,7 +2198,6 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I914900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
-        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
@@ -2227,13 +2232,14 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSUConnectivityProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:connectionDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontohardware:connectionDP>
-        <ontohardware:connectionDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontohardware:connectionDP>
         <ontohardware:connectionDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontohardware:connectionDP>
+        <ontohardware:connectionDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontohardware:connectionDP>
         <ontohardware:powerATXConnectorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontohardware:powerATXConnectorCount>
         <ontohardware:powerEPSConnectorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</ontohardware:powerEPSConnectorCount>
         <ontohardware:powerPCIeConnectorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</ontohardware:powerPCIeConnectorCount>
         <ontohardware:powerPCIeConnectorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontohardware:powerPCIeConnectorCount>
         <ontohardware:powerSATAConnectorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontohardware:powerSATAConnectorCount>
+        <ontohardware:powerSATAConnectorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontohardware:powerSATAConnectorCount>
     </owl:NamedIndividual>
     
 
@@ -2280,6 +2286,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATXCaseFormFactor">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CaseFormFactor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>ATX</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>ATX</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -2289,6 +2297,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATXPSUFormFactor">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSUFormFactor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>ATX</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>ATX</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -2816,6 +2826,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#DDR4MemoryType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MemoryType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>DDR4</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>DDR4</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -2942,6 +2954,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#FCLGA1700Socket">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Socket"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel Raptor Lake Fresh 14th</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel Raptor Lake Fresh 14th</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -2951,6 +2965,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GDDR6MemoryType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MemoryType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>GDDR6</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>GDDR6</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -2971,6 +2987,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Gen4PCIeType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PCIeType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>PCIe 4.0</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>PCIe 4.0</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -2991,6 +3009,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#HDD3_5DiskFormFactorType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#DiskFormFactor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>HDD 3.5&quot;</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>HDD 3.5&quot;</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3045,13 +3065,14 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MemoryProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:L1CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640</ontohardware:L1CacheSize>
+        <ontohardware:L1CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</ontohardware:L1CacheSize>
         <ontohardware:L2CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24576</ontohardware:L2CacheSize>
         <ontohardware:L3CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30720</ontohardware:L3CacheSize>
         <ontohardware:maxMemorySupport rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</ontohardware:maxMemorySupport>
-        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24576</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30720</ontohardware:memoryDP>
+        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</ontohardware:memoryDP>
     </owl:NamedIndividual>
     
 
@@ -3113,15 +3134,14 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUMemoryProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MemoryProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
-        <ontohardware:L1CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640</ontohardware:L1CacheSize>
         <ontohardware:L1CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</ontohardware:L1CacheSize>
         <ontohardware:L2CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28672</ontohardware:L2CacheSize>
         <ontohardware:L3CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33792</ontohardware:L3CacheSize>
         <ontohardware:maxMemorySupport rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</ontohardware:maxMemorySupport>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33792</ontohardware:memoryDP>
-        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28672</ontohardware:memoryDP>
+        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</ontohardware:memoryDP>
     </owl:NamedIndividual>
     
 
@@ -3175,8 +3195,8 @@
         <ontohardware:performanceOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPUPerformanceProfile"/>
         <ontohardware:descriptionDP>BX8071513900K</ontohardware:descriptionDP>
         <ontohardware:descriptionDP>Intel I9 13900K</ontohardware:descriptionDP>
-        <ontohardware:model>BX8071513900K</ontohardware:model>
         <ontohardware:model>Intel I9 13900K</ontohardware:model>
+        <ontohardware:productId>BX8071513900K</ontohardware:productId>
     </owl:NamedIndividual>
     
 
@@ -3187,15 +3207,14 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUMemoryProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MemoryProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
-        <ontohardware:L1CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640</ontohardware:L1CacheSize>
         <ontohardware:L1CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</ontohardware:L1CacheSize>
         <ontohardware:L2CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32768</ontohardware:L2CacheSize>
         <ontohardware:L3CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36864</ontohardware:L3CacheSize>
         <ontohardware:maxMemorySupport rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</ontohardware:maxMemorySupport>
-        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32768</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36864</ontohardware:memoryDP>
+        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</ontohardware:memoryDP>
     </owl:NamedIndividual>
     
 
@@ -3214,12 +3233,11 @@
         <ontohardware:boostFrequency rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.8</ontohardware:boostFrequency>
         <ontohardware:coreCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ontohardware:coreCount>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ontohardware:performanceDP>
+        <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</ontohardware:performanceDP>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.8</ontohardware:performanceDP>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</ontohardware:performanceDP>
-        <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</ontohardware:performanceDP>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ontohardware:performanceDP>
         <ontohardware:threadCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</ontohardware:threadCount>
-        <ontohardware:threadCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</ontohardware:threadCount>
     </owl:NamedIndividual>
     
 
@@ -3258,15 +3276,14 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUMemoryProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MemoryProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
-        <ontohardware:L1CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640</ontohardware:L1CacheSize>
         <ontohardware:L1CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</ontohardware:L1CacheSize>
         <ontohardware:L2CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32768</ontohardware:L2CacheSize>
         <ontohardware:L3CacheSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36864</ontohardware:L3CacheSize>
         <ontohardware:maxMemorySupport rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</ontohardware:maxMemorySupport>
-        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32768</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36864</ontohardware:memoryDP>
+        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</ontohardware:memoryDP>
     </owl:NamedIndividual>
     
 
@@ -3285,10 +3302,11 @@
         <ontohardware:boostFrequency rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontohardware:boostFrequency>
         <ontohardware:coreCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ontohardware:coreCount>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</ontohardware:performanceDP>
+        <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</ontohardware:performanceDP>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</ontohardware:performanceDP>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</ontohardware:performanceDP>
-        <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</ontohardware:performanceDP>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ontohardware:performanceDP>
+        <ontohardware:threadCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</ontohardware:threadCount>
         <ontohardware:threadCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</ontohardware:threadCount>
     </owl:NamedIndividual>
     
@@ -3299,6 +3317,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ITXCaseFormFactor">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CaseFormFactor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>ITX</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>ITX</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3360,6 +3380,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntelB660Chipset">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel B660</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel B660</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3369,6 +3391,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntelB760Chipset">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel B760</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel B760</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3378,6 +3402,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntelBrand">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3387,6 +3413,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntelRaptorLakeCPUArchitecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUArchitectureType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel Raptor Lake</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel Raptor Lake</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3396,6 +3424,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntelRaptorLakeFreshCPUArchitecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUArchitectureType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel Raptor Lake Fresh</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel Raptor Lake Fresh</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3405,6 +3435,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntelUHD770IntegratedGraphicsType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntegratedGraphicsType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel UHD 770</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel UHD 770</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3414,6 +3446,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntelZ690Chipset">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel Z690</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel Z690</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3423,6 +3457,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntelZ790Chipset">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Chipset"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel Z790</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel Z790</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3433,6 +3469,8 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#M2Type"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SATAType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>M.2 Gen 4.0</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>M.2 Gen 4.0</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3443,8 +3481,8 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#M2Type"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SATAType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
-        <ontohardware:descriptionDP>M.2 Key M PCIe Gen5</ontohardware:descriptionDP>
-        <ontohardware:valueTypeName>M.2 Key M PCIe Gen5</ontohardware:valueTypeName>
+        <ontohardware:descriptionDP>M.2 Gen 5.0</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>M.2 Gen 5.0</ontohardware:valueTypeName>
         <rdfs:comment>M.2 Key M PCIe Gen5</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -3455,6 +3493,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#LGA1700Socket">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Socket"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Intel Raptor Lake 13th</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Intel Raptor Lake 13th</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3464,6 +3504,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#M22280DiskFormFactorType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#DiskFormFactor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>M.2 2280</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>M.2 2280</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3473,8 +3515,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIAAdaLovelaceGPUArchitecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUArchitectureType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
-        <ontohardware:descriptionDP>Ada Lovelace</ontohardware:descriptionDP>
-        <ontohardware:valueTypeName>Ada Lovelace</ontohardware:valueTypeName>
+        <ontohardware:descriptionDP>NVIDIA Ada Lovelace</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>NVIDIA Ada Lovelace</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3484,6 +3526,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIAAmpereGPUArchitecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUArchitectureType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>NVIDIA Ampere</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>NVIDIA Ampere</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3493,6 +3537,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIABrand">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>NVIDIA</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>NVIDIA</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -3717,37 +3763,6 @@
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2540</ontohardware:performanceDP>
         <ontohardware:performanceDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4352</ontohardware:performanceDP>
         <ontohardware:shaderUnits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4352</ontohardware:shaderUnits>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPU">
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPU"/>
-        <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ASUSPrimeX670EPROWiFiMB"/>
-        <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ASUSROGStrixB760IGamingWiFiMB"/>
-        <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ASUSROGStrixZ690IGamingWiFiMB"/>
-        <ontohardware:GPUCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ASUSROGStrixZ790EGamingWiFiIIMB"/>
-        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ASUSPrimeX670EPROWiFiMB"/>
-        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ASUSROGStrixB760IGamingWiFiMB"/>
-        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ASUSROGStrixZ690IGamingWiFiMB"/>
-        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ASUSROGStrixZ790EGamingWiFiIIMB"/>
-        <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PCIGen5HDMI2_1DP1_4aGPUConnectivityProfile"/>
-        <ontohardware:descriptionOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIAGeForce4000GPUFamily"/>
-        <ontohardware:hasComponentFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIAGeForce4000GPUFamily"/>
-        <ontohardware:hasConnectivityProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PCIGen5HDMI2_1DP1_4aGPUConnectivityProfile"/>
-        <ontohardware:hasGPUComponentFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIAGeForce4000GPUFamily"/>
-        <ontohardware:hasGPUConnectivityProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PCIGen5HDMI2_1DP1_4aGPUConnectivityProfile"/>
-        <ontohardware:hasGPUMemoryProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#8GB128bitsGPUMemoryProfile"/>
-        <ontohardware:hasGPUPerformanceProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPUPerformanceProfile"/>
-        <ontohardware:hasMemoryProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#8GB128bitsGPUMemoryProfile"/>
-        <ontohardware:hasPerformanceProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPUPerformanceProfile"/>
-        <ontohardware:performanceOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPUPerformanceProfile"/>
-        <ontohardware:performanceOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#8GB128bitsGPUMemoryProfile"/>
-        <ontohardware:descriptionDP>GeForce RTX 4070 Ti Founders Edition (8 GB)</ontohardware:descriptionDP>
-        <ontohardware:model>GeForce RTX 4070 Ti Founders Edition (8 GB)</ontohardware:model>
     </owl:NamedIndividual>
     
 
@@ -4015,6 +4030,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RDNA2IntegratedGraphicsType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#IntegratedGraphicsType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>AMD RDNA 2 Integrated</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>AMD RDNA 2 Integrated</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -4201,10 +4218,9 @@
         <ontohardware:hasCompatibilityWithPCIeType rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Gen5PCIeType"/>
         <ontohardware:hasSocket rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AM5Socket"/>
         <ontohardware:slotsAndPortsOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#AM5Socket"/>
-        <ontohardware:descriptionDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontohardware:descriptionDP>
+        <ontohardware:descriptionDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontohardware:descriptionDP>
         <ontohardware:descriptionDP>AMD Ryzen 7000</ontohardware:descriptionDP>
         <ontohardware:familyName>AMD Ryzen 7000</ontohardware:familyName>
-        <ontohardware:lithography rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontohardware:lithography>
         <ontohardware:lithography rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontohardware:lithography>
     </owl:NamedIndividual>
     
@@ -4365,6 +4381,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SSD2_5DiskFormFactorType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#DiskFormFactor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>SSD 2.5&quot;</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>SSD 2.5&quot;</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -4630,6 +4648,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SamsungBrand">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Samsung</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Samsung</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -4639,6 +4659,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateBrand">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>Seagate</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Seagate</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -4744,6 +4766,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#TypeAV3_2Gen2USBPortType">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#USBType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>USB Type A 3.2 Gen 2</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>USB Type A 3.2 Gen 2</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -4764,6 +4788,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXBrand">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Brand"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>XFX</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>XFX</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -4957,8 +4983,8 @@
         <ontohardware:performanceOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#12GB192bitsGPUMemoryProfile"/>
         <ontohardware:descriptionDP>RX-77TQICKB9</ontohardware:descriptionDP>
         <ontohardware:descriptionDP>Speedster QICK 319 Black Edition Radeon RX 7700 XT (12 GB)</ontohardware:descriptionDP>
-        <ontohardware:model>RX-77TQICKB9</ontohardware:model>
-        <ontohardware:productId>Speedster QICK 319 Black Edition Radeon RX 7700 XT (12 GB)</ontohardware:productId>
+        <ontohardware:model>Speedster QICK 319 Black Edition Radeon RX 7700 XT (12 GB)</ontohardware:model>
+        <ontohardware:productId>RX-77TQICKB9</ontohardware:productId>
     </owl:NamedIndividual>
     
 
@@ -5000,6 +5026,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#mATXCaseFormFactor">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CaseFormFactor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>mATX</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>mATX</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -5218,8 +5246,9 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#MemoryModuleProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#RAMMemoryModuleProfile"/>
-        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</ontohardware:memoryDP>
+        <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</ontohardware:memoryDP>
         <ontohardware:memoryDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontohardware:memoryDP>
+        <ontohardware:moduleCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</ontohardware:moduleCapacity>
         <ontohardware:moduleCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</ontohardware:moduleCapacity>
         <ontohardware:moduleCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontohardware:moduleCount>
     </owl:NamedIndividual>
@@ -5301,6 +5330,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#5_1BluetoothInterface">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#WirelessInterfaceType"/>
+        <ontohardware:descriptionDP>Bluetooth 5.1</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Bluetooth 5.1</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -5321,6 +5352,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#5_3BluetoothInterface">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#WirelessInterfaceType"/>
+        <ontohardware:descriptionDP>Bluetooth 5.3</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Bluetooth 5.3</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -5330,6 +5363,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#5_4BluetoothInterface">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#WirelessInterfaceType"/>
+        <ontohardware:descriptionDP>Bluetooth 5.4</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>Bluetooth 5.4</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -5350,6 +5385,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#6WifiInterface">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#WirelessInterfaceType"/>
+        <ontohardware:descriptionDP>WiFi 6</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>WiFi 6</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -5359,6 +5396,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#7WifiInterface">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#WirelessInterfaceType"/>
+        <ontohardware:descriptionDP>WiFi 7</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>WiFi 7</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 
@@ -5424,6 +5463,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#80+BronzeEfficiencyCertification">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#EfficiencyCertificationType"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ValueType"/>
+        <ontohardware:descriptionDP>80+ Bronze Certificattion</ontohardware:descriptionDP>
+        <ontohardware:valueTypeName>80+ Bronze Certificattion</ontohardware:valueTypeName>
     </owl:NamedIndividual>
     
 

@@ -1,5 +1,5 @@
 import { PREFIXES } from './sparql.prefixes';
-import { ComparatorSymbol } from './types.converter';
+import { ComparatorSymbol } from '../helpers/types.converter';
 
 export type PropertyType = 'integer' | 'decimal' | 'string' | 'objectId';
 

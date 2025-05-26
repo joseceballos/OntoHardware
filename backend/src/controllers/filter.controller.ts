@@ -8,17 +8,13 @@ import {
 } from '@nestjs/common';
 import { FILTER_CONFIG } from 'src/data/filter.config';
 import { FusekiService } from 'src/fuseki/fuseki.service';
-import { buildFilterQuery, FilterParams } from 'src/helpers/filter.builder';
+import { buildFilterQuery, FilterParams } from 'src/builders/filter.builder';
 import {
   ComparatorKey,
   getComparatorSymbolByKey,
 } from 'src/helpers/types.converter';
-
-interface FilterResponse {
-  uri: string;
-  id: string;
-  profile?: string;
-}
+import { fetchAllComponentsBindings } from 'src/fetch/components.fetch';
+import { mapBindingsToComponents } from 'src/fetch/component.map';
 
 @Controller('filter')
 export class FilterController {
@@ -30,7 +26,7 @@ export class FilterController {
     @Query('propertyName') propertyName: string,
     @Query('op') op: ComparatorKey,
     @Query('propertyValue') propertyValue: number,
-  ): Promise<FilterResponse[]> {
+  ): Promise<Record<string, any>[]> {
     const filterData = FILTER_CONFIG.find(
       (c) => c.componentKey === componentKey && c.propertyName === propertyName,
     );
@@ -50,24 +46,42 @@ export class FilterController {
       propertyValue,
     };
 
-    console.log(params);
-
     const sparql = buildFilterQuery(params);
 
-    console.log(sparql);
-
+    let uris: string[];
     try {
       const res = await this.fuseki.select(sparql);
-      return res.results.bindings.map((b) => ({
-        uri: b.item.value,
-        id: b.id.value,
-        profile: b.profile?.value,
-      }));
+      uris = res.results.bindings.map((b) => b.item.value);
     } catch {
       throw new HttpException(
         'Error executing SPARQL filter',
         HttpStatus.BAD_GATEWAY,
       );
     }
+
+    let rawComponents: Array<{
+      id: string;
+      binding: Record<string, { value: string }>;
+    }>;
+    try {
+      rawComponents = await fetchAllComponentsBindings(
+        this.fuseki,
+        filterData.componentType,
+        uris,
+        filterData.fieldMappings,
+      );
+    } catch {
+      throw new HttpException(
+        `Error retrieving properties for ${componentKey}`,
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+
+    const mappedComponents = mapBindingsToComponents(
+      rawComponents,
+      filterData.fieldMappings,
+    );
+
+    return mappedComponents;
   }
 }

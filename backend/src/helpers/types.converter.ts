@@ -1,4 +1,5 @@
 import { ComponentKey, ComponentType } from 'src/data/compatibility.config';
+import { FieldMapping } from 'src/mapping/mapper.utils';
 
 export type ComparatorKey = 'gt' | 'lt' | 'ge' | 'le' | 'eq';
 export type ComparatorSymbol = '>' | '<' | '>=' | '<=' | '=';
@@ -28,10 +29,29 @@ export function getComponentTypeByKey(
     mb: 'Motherboard',
     gpu: 'GPU',
     ram: 'RAM',
+    psu: 'PSU',
+    str: 'Storage',
   };
   if (componentKey) {
     return COMPONENTTYPE_MAP[componentKey];
   } else {
     return undefined;
   }
+}
+
+export function getPropertyTypedFromRawValue(
+  mapping: FieldMapping,
+  rawValue: string,
+): number | string {
+  const { type } = mapping;
+
+  if (type === 'integer') {
+    return parseInt(rawValue);
+  }
+
+  if (type === 'decimal') {
+    return parseFloat(rawValue);
+  }
+
+  return rawValue;
 }

@@ -1,4 +1,9 @@
-import { PropertyType } from 'src/helpers/filter.builder';
+import { PropertyType } from 'src/builders/filter.builder';
+import { CPU_FIELD_MAPPINGS } from 'src/mapping/cpu-mapping.config';
+import { FieldMapping } from 'src/mapping/mapper.utils';
+import { GPU_FIELD_MAPPINGS } from 'src/mapping/gpu-mapping.config';
+import { MB_FIELD_MAPPINGS } from 'src/mapping/mb-mapping.config';
+import { RAM_FIELD_MAPPINGS } from 'src/mapping/ram-mapping.config';
 
 export interface FilterConfig {
   componentKey: 'cpu' | 'gpu' | 'mb' | 'ram';
@@ -7,6 +12,7 @@ export interface FilterConfig {
   profile: string | null;
   propertyName: string;
   propertyType: PropertyType;
+  fieldMappings: FieldMapping[];
 }
 
 export const FILTER_CONFIG: FilterConfig[] = [
@@ -17,6 +23,7 @@ export const FILTER_CONFIG: FilterConfig[] = [
     profile: 'CPUPerformanceProfile',
     propertyName: 'coreCount',
     propertyType: 'integer',
+    fieldMappings: CPU_FIELD_MAPPINGS,
   },
   {
     componentKey: 'cpu',
@@ -25,6 +32,7 @@ export const FILTER_CONFIG: FilterConfig[] = [
     profile: 'CPUPerformanceProfile',
     propertyName: 'baseFrequency',
     propertyType: 'decimal',
+    fieldMappings: CPU_FIELD_MAPPINGS,
   },
   {
     componentKey: 'gpu',
@@ -33,6 +41,7 @@ export const FILTER_CONFIG: FilterConfig[] = [
     profile: 'GPUMemoryProfile',
     propertyName: 'memoryCapacity',
     propertyType: 'integer',
+    fieldMappings: GPU_FIELD_MAPPINGS,
   },
   {
     componentKey: 'gpu',
@@ -41,6 +50,7 @@ export const FILTER_CONFIG: FilterConfig[] = [
     profile: 'GPUPerformanceProfile',
     propertyName: 'baseClock',
     propertyType: 'decimal',
+    fieldMappings: GPU_FIELD_MAPPINGS,
   },
   {
     componentKey: 'ram',
@@ -49,6 +59,7 @@ export const FILTER_CONFIG: FilterConfig[] = [
     profile: 'RAMPerformanceProfile',
     propertyName: 'spdSpeed',
     propertyType: 'integer',
+    fieldMappings: RAM_FIELD_MAPPINGS,
   },
   {
     componentKey: 'ram',
@@ -57,6 +68,7 @@ export const FILTER_CONFIG: FilterConfig[] = [
     profile: 'RAMMemoryModuleProfile',
     propertyName: 'moduleCapacity',
     propertyType: 'integer',
+    fieldMappings: RAM_FIELD_MAPPINGS,
   },
   {
     componentKey: 'mb',
@@ -65,6 +77,7 @@ export const FILTER_CONFIG: FilterConfig[] = [
     profile: null,
     propertyName: 'Chipset',
     propertyType: 'objectId',
+    fieldMappings: MB_FIELD_MAPPINGS,
   },
   {
     componentKey: 'mb',
@@ -73,5 +86,6 @@ export const FILTER_CONFIG: FilterConfig[] = [
     profile: null,
     propertyName: 'CaseFormFactor',
     propertyType: 'objectId',
+    fieldMappings: MB_FIELD_MAPPINGS,
   },
 ];
