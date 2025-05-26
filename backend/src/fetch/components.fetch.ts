@@ -10,6 +10,7 @@ export async function fetchComponentBindings(
   mappings: FieldMapping[],
 ): Promise<Record<string, { value: string }>> {
   const sparql = buildMappingQuery(id, mappings);
+  console.log(sparql);
   let binding: Record<string, { value: string }>;
 
   try {
@@ -39,14 +40,12 @@ export async function fetchAllComponentsBindings(
   return Promise.all(
     uris.map(async (uri) => {
       const id = uri.split('#').pop()!;
-      console.log(id);
       const binding = await fetchComponentBindings(
         fuseki,
         id,
         componentType,
         mappings,
       );
-      console.log(binding);
       return { id, binding };
     }),
   );

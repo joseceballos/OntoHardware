@@ -686,13 +686,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PowerTDP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PowerTDP">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#performanceDP"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#TDP -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#TDP">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#performanceDP"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -2318,19 +2327,15 @@
     <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCX500MATXPSU -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCX500MATXPSU">
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata5PCIe2PSUConnectivityProfile"/>
         <ontohardware:descriptionOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasComponentFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasConnectivityProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata5PCIe2PSUConnectivityProfile"/>
         <ontohardware:hasPSUComponentFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasPSUConnectivityProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata5PCIe2PSUConnectivityProfile"/>
-        <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</ontohardware:TDP>
+        <ontohardware:PowerTDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</ontohardware:PowerTDP>
         <ontohardware:componentWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.27</ontohardware:componentWeight>
         <ontohardware:descriptionDP>CP-9020059-UK</ontohardware:descriptionDP>
         <ontohardware:descriptionDP>Corsair CX500M 500 W 80+ Bronze Certified Semi-modular ATX Power Supply</ontohardware:descriptionDP>
@@ -2345,19 +2350,15 @@
     <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCX650MATXPSU -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCX650MATXPSU">
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata6PCIe2PSUConnectivityProfile"/>
         <ontohardware:descriptionOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasComponentFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasConnectivityProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata6PCIe2PSUConnectivityProfile"/>
         <ontohardware:hasPSUComponentFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasPSUConnectivityProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata6PCIe2PSUConnectivityProfile"/>
-        <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">650</ontohardware:TDP>
+        <ontohardware:PowerTDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">650</ontohardware:PowerTDP>
         <ontohardware:componentWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.27</ontohardware:componentWeight>
         <ontohardware:descriptionDP>CP-9020103-NA</ontohardware:descriptionDP>
         <ontohardware:descriptionDP>Corsair CX650M 650 W 80+ Bronze Certified Semi-modular ATX Power Supply</ontohardware:descriptionDP>
@@ -2372,19 +2373,15 @@
     <!-- http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCX850MATXPSU -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCX850MATXPSU">
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata8PCIe4PSUConnectivityProfile"/>
         <ontohardware:descriptionOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasComponentFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasConnectivityProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata8PCIe4PSUConnectivityProfile"/>
         <ontohardware:hasPSUComponentFamily rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairCXMATXPSUFamily"/>
         <ontohardware:hasPSUConnectivityProfile rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#ATX1EPS1Sata8PCIe4PSUConnectivityProfile"/>
-        <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">850</ontohardware:TDP>
+        <ontohardware:PowerTDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">850</ontohardware:PowerTDP>
         <ontohardware:componentWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.27</ontohardware:componentWeight>
         <ontohardware:descriptionDP>CP-9020099-NA</ontohardware:descriptionDP>
         <ontohardware:descriptionDP>Corsair CX850M 850 W 80+ Bronze Certified Semi-modular ATX Power Supply</ontohardware:descriptionDP>
@@ -3081,9 +3078,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I713700KCPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</ontohardware:TDP>
@@ -3150,9 +3145,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I714700KCPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</ontohardware:TDP>
@@ -3223,9 +3216,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</ontohardware:TDP>
@@ -3292,9 +3283,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I914900KCPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</ontohardware:TDP>
@@ -3642,9 +3631,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX3060tiGPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</ontohardware:TDP>
@@ -3696,9 +3683,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX3080tiGPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">350</ontohardware:TDP>
@@ -3750,9 +3735,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060tiGPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">165</ontohardware:TDP>
@@ -3771,9 +3754,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4070tiGPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">285</ontohardware:TDP>
@@ -3825,9 +3806,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4080GPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320</ontohardware:TDP>
@@ -4112,9 +4091,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen5700XCPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</ontohardware:TDP>
@@ -4181,9 +4158,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen5900XCPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</ontohardware:TDP>
@@ -4230,9 +4205,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700CPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</ontohardware:TDP>
@@ -4345,9 +4318,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7900XCPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</ontohardware:TDP>
@@ -4831,9 +4802,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX6900XTGPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</ontohardware:TDP>
@@ -4885,9 +4854,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XTGPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</ontohardware:TDP>
@@ -4939,9 +4906,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX6700XTGPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">230</ontohardware:TDP>
@@ -4993,9 +4958,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XTGPUPerformanceProfile">
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Component"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#GPUPerformanceProfile"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PSU"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#PerformanceProfile"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Profile"/>
         <ontohardware:TDP rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">245</ontohardware:TDP>
