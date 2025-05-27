@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { FusekiService } from '../fuseki/fuseki.service';
+import { FusekiService } from 'src/fuseki/fuseki.service';
 import { BaseController } from './BaseController';
 import { PSUResponse } from 'src/responses/psu.response';
 import { PSU_FIELD_MAPPINGS } from 'src/mapping/psu-mapping.config';

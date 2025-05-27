@@ -47,7 +47,6 @@ export class FilterController {
     };
 
     const sparql = buildFilterQuery(params);
-    console.log(sparql);
 
     let uris: string[];
     try {

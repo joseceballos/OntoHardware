@@ -1,8 +1,8 @@
 import { Controller } from '@nestjs/common';
-import { FusekiService } from '../fuseki/fuseki.service';
-import { BaseController } from './BaseController';
 import { CPU_FIELD_MAPPINGS } from 'src/mapping/cpu-mapping.config';
 import { CPUResponse } from 'src/responses/cpu.response';
+import { FusekiService } from 'src/fuseki/fuseki.service';
+import { BaseController } from './BaseController';
 
 @Controller('cpu')
 export class CpuController extends BaseController<CPUResponse> {

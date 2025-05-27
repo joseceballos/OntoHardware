@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { FusekiService } from '../fuseki/fuseki.service';
+import { FusekiService } from 'src/fuseki/fuseki.service';
 import { BaseController } from './BaseController';
 import { GPU_FIELD_MAPPINGS } from 'src/mapping/gpu-mapping.config';
 import { GPUResponse } from 'src/responses/gpu.response';

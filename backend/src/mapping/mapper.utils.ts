@@ -16,6 +16,7 @@ export function applyMapping<T extends Record<string, any>>(
 ): T {
   const mappedObject: Record<string, any> = {
     uri: `onto:${id}`,
+    id: id,
   };
 
   for (const m of mappings) {

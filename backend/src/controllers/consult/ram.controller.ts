@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { FusekiService } from '../fuseki/fuseki.service';
+import { FusekiService } from 'src/fuseki/fuseki.service';
 import { BaseController } from './BaseController';
 import { RAM_FIELD_MAPPINGS } from 'src/mapping/ram-mapping.config';
 import { RAMResponse } from 'src/responses/ram.response';

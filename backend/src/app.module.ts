@@ -3,14 +3,16 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HttpModule } from '@nestjs/axios';
 import { FusekiModule } from './fuseki/fuseki.module';
-import { CpuController } from './controllers/cpu.controller';
-import { MbController } from './controllers/mb.controller';
-import { GpuController } from './controllers/gpu.controller';
-import { RamController } from './controllers/ram.controller';
-import { FilterController } from './controllers/filter.controller';
-import { CompatibilityController } from './controllers/compatibility.controller';
-import { PsuController } from './controllers/psu.controller';
-import { StorageController } from './controllers/storage.controller';
+import { CpuController } from './controllers/consult/cpu.controller';
+import { MbController } from './controllers/consult/mb.controller';
+import { GpuController } from './controllers/consult/gpu.controller';
+import { RamController } from './controllers/consult/ram.controller';
+import { FilterController } from './controllers/filter/filter.controller';
+import { CompatibilityController } from './controllers/compatibility/compatibility.controller';
+import { PsuController } from './controllers/consult/psu.controller';
+import { StorageController } from './controllers/consult/storage.controller';
+import { BuildController } from './controllers/compatibility/build.controller';
+import { CompatibilityService } from './services/compatibility.service';
 
 @Module({
   imports: [HttpModule, FusekiModule],
@@ -24,7 +26,8 @@ import { StorageController } from './controllers/storage.controller';
     StorageController,
     FilterController,
     CompatibilityController,
+    BuildController,
   ],
-  providers: [AppService],
+  providers: [AppService, CompatibilityService],
 })
 export class AppModule {}

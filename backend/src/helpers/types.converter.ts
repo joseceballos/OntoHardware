@@ -39,6 +39,24 @@ export function getComponentTypeByKey(
   }
 }
 
+export function getComponentKeyByType(
+  componentType: ComponentType,
+): ComponentKey | undefined {
+  const TYPEKEY_MAP: Record<ComponentType, ComponentKey> = {
+    CPU: 'cpu',
+    Motherboard: 'mb',
+    GPU: 'gpu',
+    RAM: 'ram',
+    PSU: 'psu',
+    Storage: 'str',
+  };
+  if (componentType) {
+    return TYPEKEY_MAP[componentType];
+  } else {
+    return undefined;
+  }
+}
+
 export function getPropertyTypedFromRawValue(
   mapping: FieldMapping,
   rawValue: string,
@@ -54,4 +72,18 @@ export function getPropertyTypedFromRawValue(
   }
 
   return rawValue;
+}
+
+export function assertString(field: unknown, name: string): string {
+  if (typeof field !== 'string') {
+    throw new Error(`Expected ${name} to be string, got ${typeof field}`);
+  }
+  return field;
+}
+
+export function assertNumber(field: unknown, name: string): number {
+  if (typeof field !== 'number') {
+    throw new Error(`Expected ${name} to be number, got ${typeof field}`);
+  }
+  return field;
 }

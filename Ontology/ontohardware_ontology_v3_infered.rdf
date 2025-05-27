@@ -76,6 +76,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#StorageCompatibleWithMB">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#compatibleWith"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#StorageCompatibleWithMB"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
 
@@ -1859,6 +1861,12 @@
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x24DDR57000CL40RAM"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x169DDR54800CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
@@ -1867,6 +1875,12 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX3080ti12GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7900XCPU"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX6900XT16GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX6700XT12GBGPU"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W6B5_2MBNetworkProfile"/>
@@ -1908,6 +1922,12 @@
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x24DDR57000CL40RAM"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990EVOPlusM22TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990EVOPlusM24TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x169DDR54800CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
@@ -1916,6 +1936,12 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7700XCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen7900XCPU"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990EVOPlusM22TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990EVOPlusM24TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W6EB5_2MBNetworkProfile"/>
@@ -1956,6 +1982,12 @@
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x8DDR42400CL14RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x8DDR45000CL18RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX4x32DDR43600CL18RAM"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x16DDR43000CL15RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x8DDR42400CL14RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x8DDR45000CL18RAM"/>
@@ -1964,6 +1996,12 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX3080ti12GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen5700XCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen5900XCPU"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX6900XT16GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX6700XT12GBGPU"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W6B5_1MBNetworkProfile"/>
@@ -2002,6 +2040,12 @@
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x24DDR57000CL40RAM"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x169DDR54800CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
@@ -2010,6 +2054,12 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX3060ti8GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX3080ti12GBGPU"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX6900XT16GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX6700XT12GBGPU"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W6EB5_2MBNetworkProfile"/>
@@ -2053,6 +2103,12 @@
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x24DDR57000CL40RAM"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x169DDR54800CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
@@ -2063,6 +2119,12 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I914900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W6EB5_3MBNetworkProfile"/>
@@ -2101,6 +2163,12 @@
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x8DDR42400CL14RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x8DDR45000CL18RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX4x32DDR43600CL18RAM"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x16DDR43000CL15RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x8DDR42400CL14RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceLPX2x8DDR45000CL18RAM"/>
@@ -2109,6 +2177,12 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX3080ti12GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen5700XCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Ryzen5900XCPU"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX6900XT16GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX6700XT12GBGPU"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W6EB5_2MBNetworkProfile"/>
@@ -2150,6 +2224,12 @@
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x24DDR57000CL40RAM"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x169DDR54800CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
@@ -2158,6 +2238,12 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I913900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM21TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990ProM22TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W6EB5_2MBNetworkProfile"/>
@@ -2198,6 +2284,12 @@
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
         <ontohardware:RAMCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x24DDR57000CL40RAM"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990EVOPlusM22TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990EVOPlusM24TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:StorageCompatibleWithMB rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x169DDR54800CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR55200CL40RAM"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#CorsairVengeanceRGB2x16DDR58000CL36RAM"/>
@@ -2208,6 +2300,12 @@
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#I914900KCPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX4060ti8GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#NVIDIARTX408016GBGPU"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD2TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung870QVOSSD8TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990EVOPlusM22TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#Samsung990EVOPlusM24TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD4TBStorage"/>
+        <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#SeagateNASHDD8TBStorage"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXMERCRadeonRX7900XT20GBGPU"/>
         <ontohardware:compatibleWith rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#XFXQICKRadeonRX7700XT12GBGPU"/>
         <ontohardware:connectivityOP rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#E2_5W7B5_4MBNetworkProfile"/>

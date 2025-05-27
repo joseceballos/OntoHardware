@@ -5,6 +5,13 @@ import { MB_FIELD_MAPPINGS } from 'src/mapping/mb-mapping.config';
 import { RAM_FIELD_MAPPINGS } from 'src/mapping/ram-mapping.config';
 import { PSU_FIELD_MAPPINGS } from 'src/mapping/psu-mapping.config';
 import { STORAGE_FIELD_MAPPINGS } from 'src/mapping/storage-mapping.config';
+import { CPUResponse } from 'src/responses/cpu.response';
+import { GPUResponse } from 'src/responses/gpu.response';
+import { MBResponse } from 'src/responses/mb.response';
+import { RAMResponse } from 'src/responses/ram.response';
+import { PSUResponse } from 'src/responses/psu.response';
+import { StorageResponse } from 'src/responses/storage.response';
+import { getComponentKeyByType } from 'src/helpers/types.converter';
 
 export type ComponentKey = 'cpu' | 'mb' | 'gpu' | 'ram' | 'psu' | 'str';
 export type ComponentType =
@@ -19,10 +26,24 @@ export type FeatureType =
   | 'MemoryType'
   | 'PCIPortType'
   | 'TDP'
-  | 'M2PortType';
+  | 'DiskConnectionType';
 export type CompatibilityRuleType = {
-  components: [ComponentType, ComponentType];
+  components: [ComponentKey, ComponentKey];
   feature: FeatureType;
+};
+
+export type ComponentResponse =
+  | CPUResponse
+  | GPUResponse
+  | MBResponse
+  | RAMResponse
+  | PSUResponse
+  | StorageResponse;
+
+export type CompatibilityCheck = {
+  components: [ComponentResponse, ComponentResponse];
+  feature: FeatureType;
+  compatible: boolean;
 };
 
 export const COMPATIBILITY_MAPPINGS: {
@@ -38,31 +59,33 @@ export const COMPATIBILITY_MAPPINGS: {
 
 export const COMPAT_CONFIG: CompatibilityRuleType[] = [
   {
-    components: ['CPU', 'Motherboard'],
+    components: ['cpu', 'mb'],
     feature: 'Socket',
   },
   {
-    components: ['RAM', 'Motherboard'],
+    components: ['ram', 'mb'],
     feature: 'MemoryType',
   },
   {
-    components: ['GPU', 'Motherboard'],
+    components: ['gpu', 'mb'],
     feature: 'PCIPortType',
   },
   {
-    components: ['Storage', 'Motherboard'],
-    feature: 'PCIPortType',
-  },
-  {
-    components: ['Storage', 'Motherboard'],
-    feature: 'M2PortType',
+    components: ['str', 'mb'],
+    feature: 'DiskConnectionType',
   },
 ];
+
+export function getRulesByComponentKey(
+  componentKey: ComponentKey,
+): CompatibilityRuleType[] {
+  return COMPAT_CONFIG.filter((rule) => rule.components.includes(componentKey));
+}
 
 export function getRulesByComponentType(
   componentType: ComponentType,
 ): CompatibilityRuleType[] {
   return COMPAT_CONFIG.filter((rule) =>
-    rule.components.includes(componentType),
+    rule.components.includes(getComponentKeyByType(componentType)!),
   );
 }

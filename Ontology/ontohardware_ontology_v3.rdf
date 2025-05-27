@@ -73,6 +73,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#StorageCompatibleWithMB">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/josec/ontologies/2025/3/ontohardware#compatibleWith"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     </owl:ObjectProperty>
     
 

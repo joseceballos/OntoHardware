@@ -91,10 +91,12 @@ export class CompatibilityController {
     @Query('component1Id') component1Id: string,
     @Query('component2Id') component2Id: string,
   ): Promise<{ compatible: boolean }> {
-    const compatibleRes = await this.fuseki.ask(
-      buildCompatibilityBetweenComponents(component1Id, component2Id),
+    const sparql = buildCompatibilityBetweenComponents(
+      component1Id,
+      component2Id,
     );
-    return { compatible: compatibleRes };
+    const res = await this.fuseki.ask(sparql);
+    return { compatible: res };
   }
 
   @Get(':componentId')
