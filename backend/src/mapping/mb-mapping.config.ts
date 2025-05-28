@@ -1,6 +1,6 @@
-import { FieldMapping } from './mapper.utils';
+import { FieldMappings } from './field-mapping.config';
 
-export const MB_FIELD_MAPPINGS: FieldMapping[] = [
+export const MB_FIELD_MAPPINGS: FieldMappings = [
   { key: 'productId', uri: 'productId', type: 'string' },
   { key: 'model', uri: 'model', type: 'string' },
   {

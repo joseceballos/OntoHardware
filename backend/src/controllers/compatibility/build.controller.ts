@@ -1,5 +1,5 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { CheckBuildDto } from 'src/data/build.config';
+import { CheckBuildDto } from 'src/dto/checkBuild.dto';
 import { CompatibilityService } from 'src/services/compatibility.service';
 
 @Controller('check')

@@ -1,4 +1,4 @@
-import { FieldMapping } from 'src/mapping/mapper.utils';
+import { FieldMappings } from 'src/mapping/field-mapping.config';
 import { applyMapping } from 'src/mapping/mapper.utils';
 
 export function mapBindingsToComponents<T extends Record<string, any>>(
@@ -6,7 +6,7 @@ export function mapBindingsToComponents<T extends Record<string, any>>(
     id: string;
     binding: Record<string, { value: string }>;
   }>,
-  mappings: FieldMapping[],
+  mappings: FieldMappings,
 ): T[] {
   return rawComponents.map(({ id, binding }) =>
     applyMapping<T>(id, binding, mappings),

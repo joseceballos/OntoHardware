@@ -1,50 +1,36 @@
 import {
   Controller,
-  Get,
-  Param,
   NotFoundException,
-  Query,
-  BadRequestException,
   HttpException,
   HttpStatus,
+  Body,
+  Post,
 } from '@nestjs/common';
-import {
-  COMPATIBILITY_MAPPINGS,
-  CompatibilityRuleType,
-  ComponentKey,
-  ComponentType,
-  getRulesByComponentType,
-} from 'src/data/compatibility.config';
+import { ComponentResponse } from 'src/data/compatibility.config';
 import { FusekiService } from 'src/fuseki/fuseki.service';
-import { buildGetTypeQuery } from 'src/builders/check.builder';
 import {
   buildCompatibilityBetweenComponents,
   buildCompatibilityListWithComponentTypeQuery,
 } from 'src/builders/compatible.builder';
-import { getComponentTypeByKey } from 'src/helpers/types.converter';
-import { mapBindingsToComponents } from 'src/fetch/component.map';
-import { fetchAllComponentsBindings } from 'src/fetch/components.fetch';
+import { fetchAllComponents } from 'src/fetch/components.fetch';
+import { COMPONENTS_TYPES_CONFIG } from 'src/data/componentType.config';
+import { CompatibleListDto } from 'src/dto/compatibleList.dto';
+import { CompatibleComponentstDto } from 'src/dto/compatibleComponents.dto';
 
 @Controller('compatible')
 export class CompatibilityController {
   constructor(private readonly fuseki: FusekiService) {}
 
-  @Get('list')
+  @Post('list')
   async compatiblesComponentsList(
-    @Query('componentId') componentId: string,
-    @Query('familyKey') familyKey: string,
-  ): Promise<Record<string, any>[]> {
-    const targetFamilyId = getComponentTypeByKey(familyKey as ComponentKey);
-
-    if (targetFamilyId === undefined) {
-      throw new BadRequestException(`${familyKey} not exist`);
-    }
-
-    const mappings = COMPATIBILITY_MAPPINGS[familyKey as ComponentKey];
+    @Body() compatibleListData: CompatibleListDto,
+  ): Promise<ComponentResponse[]> {
+    const { componentId, componentKey } = compatibleListData;
+    const componentTypeConfig = COMPONENTS_TYPES_CONFIG[componentKey];
 
     const sparql = buildCompatibilityListWithComponentTypeQuery(
       componentId,
-      targetFamilyId,
+      componentKey,
     );
 
     let uris: string[];
@@ -63,59 +49,31 @@ export class CompatibilityController {
       );
     }
 
-    let rawComponents: Array<{
-      id: string;
-      binding: Record<string, { value: string }>;
-    }>;
     try {
-      rawComponents = await fetchAllComponentsBindings(
+      const componentResponses = await fetchAllComponents<ComponentResponse>(
         this.fuseki,
-        targetFamilyId,
         uris,
-        mappings,
+        componentTypeConfig,
       );
+      return componentResponses;
     } catch {
       throw new HttpException(
-        `Error retrieving properties for ${familyKey}`,
+        `Error retrieving properties for ${componentKey}`,
         HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
-
-    const mappedComponents = mapBindingsToComponents(rawComponents, mappings);
-
-    return mappedComponents;
   }
 
-  @Get('check')
+  @Post('check')
   async checkCompatibleComponents(
-    @Query('component1Id') component1Id: string,
-    @Query('component2Id') component2Id: string,
+    @Body() checkCompatibilityData: CompatibleComponentstDto,
   ): Promise<{ compatible: boolean }> {
+    const { component1Id, component2Id } = checkCompatibilityData;
     const sparql = buildCompatibilityBetweenComponents(
       component1Id,
       component2Id,
     );
     const res = await this.fuseki.ask(sparql);
     return { compatible: res };
-  }
-
-  @Get(':componentId')
-  async compatiblesRules(
-    @Param('componentId') componentId: string,
-  ): Promise<CompatibilityRuleType[]> {
-    const componentTypeRes = await this.fuseki.select(
-      buildGetTypeQuery(componentId),
-    );
-
-    if (componentTypeRes.results.bindings.length === 0) {
-      throw new NotFoundException(`Not exist the component ${componentId}`);
-    }
-
-    const binding = componentTypeRes.results.bindings[0];
-    const compatibleRules = getRulesByComponentType(
-      binding.typeName.value as ComponentType,
-    );
-
-    return compatibleRules;
   }
 }

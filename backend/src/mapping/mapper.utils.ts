@@ -1,18 +1,10 @@
 import { getPropertyTypedFromRawValue } from 'src/helpers/types.converter';
-
-export type FieldType = 'string' | 'integer' | 'decimal' | 'objectId';
-
-export interface FieldMapping {
-  key: string;
-  uri: string;
-  type: FieldType;
-  path?: string[];
-}
+import { FieldMappings } from './field-mapping.config';
 
 export function applyMapping<T extends Record<string, any>>(
   id: string,
   binding: Record<string, { value: string }>,
-  mappings: FieldMapping[],
+  mappings: FieldMappings,
 ): T {
   const mappedObject: Record<string, any> = {
     uri: `onto:${id}`,

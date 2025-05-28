@@ -1,9 +1,7 @@
-import { assertString, assertNumber } from 'src/helpers/types.converter';
+import { assertNumber, assertString } from 'src/helpers/types.converter';
+import { ComponentBaseResponse, toBaseResponse } from './base.response';
 
-export interface GPUResponse {
-  id: string;
-  productId: string;
-  model: string;
+export interface GPUResponse extends ComponentBaseResponse {
   brand: string;
   memory: number;
   cpuBaseClock: number;
@@ -12,16 +10,18 @@ export interface GPUResponse {
 }
 
 export function toGPUResponse(
-  raw: Record<string, string | number>,
+  rawComponent: Record<string, string | number>,
 ): GPUResponse {
-  return {
-    id: assertString(raw.id, 'id'),
-    productId: assertString(raw.productId, 'productId'),
-    model: assertString(raw.model, 'model'),
-    brand: assertString(raw.brandName, 'brand'),
-    memory: assertNumber(raw.memory, 'memory'),
-    cpuBaseClock: assertNumber(raw.cpuBaseClock, 'cpuBaseClock'),
-    PCIe: assertString(raw.PCIeName, 'PCIe'),
-    TDP: assertNumber(raw.TDP, 'TDP'),
+  const componentBaseResponse = toBaseResponse(rawComponent);
+
+  const gpuResponse: GPUResponse = {
+    ...componentBaseResponse,
+    brand: assertString(rawComponent.brandName, 'brand'),
+    memory: assertNumber(rawComponent.memory, 'memory'),
+    cpuBaseClock: assertNumber(rawComponent.cpuBaseClock, 'cpuBaseClock'),
+    PCIe: assertString(rawComponent.PCIeName, 'PCIe'),
+    TDP: assertNumber(rawComponent.TDP, 'TDP'),
   };
+
+  return gpuResponse;
 }

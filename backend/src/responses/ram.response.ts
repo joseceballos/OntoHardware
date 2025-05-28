@@ -1,23 +1,26 @@
-import { assertString, assertNumber } from 'src/helpers/types.converter';
+import { assertNumber, assertString } from 'src/helpers/types.converter';
+import { ComponentBaseResponse, toBaseResponse } from './base.response';
 
-export interface RAMResponse {
-  id: string;
-  productId: string;
-  model: string;
+export interface RAMResponse extends ComponentBaseResponse {
   type: string;
   memorySpeed: number;
   capacityPerModule: number;
 }
 
 export function toRAMResponse(
-  raw: Record<string, string | number>,
+  rawComponent: Record<string, string | number>,
 ): RAMResponse {
-  return {
-    id: assertString(raw.id, 'id'),
-    productId: assertString(raw.productId, 'productId'),
-    model: assertString(raw.model, 'model'),
-    type: assertString(raw.typeName, 'type'),
-    memorySpeed: assertNumber(raw.memorySpeed, 'memorySpeed'),
-    capacityPerModule: assertNumber(raw.capacityPerModule, 'capacityPerModule'),
+  const componentBaseResponse = toBaseResponse(rawComponent);
+
+  const ramResponse: RAMResponse = {
+    ...componentBaseResponse,
+    type: assertString(rawComponent.typeName, 'type'),
+    memorySpeed: assertNumber(rawComponent.memorySpeed, 'memorySpeed'),
+    capacityPerModule: assertNumber(
+      rawComponent.capacityPerModule,
+      'capacityPerModule',
+    ),
   };
+
+  return ramResponse;
 }

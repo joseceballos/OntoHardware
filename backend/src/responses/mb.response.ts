@@ -1,9 +1,7 @@
 import { assertString } from 'src/helpers/types.converter';
+import { ComponentBaseResponse, toBaseResponse } from './base.response';
 
-export interface MBResponse {
-  id: string;
-  productId: string;
-  model: string;
+export interface MBResponse extends ComponentBaseResponse {
   socket: string;
   memoryType: string;
   chipset: string;
@@ -11,15 +9,19 @@ export interface MBResponse {
   PCIe: string;
 }
 
-export function toMBResponse(raw: Record<string, string | number>): MBResponse {
-  return {
-    id: assertString(raw.id, 'id'),
-    productId: assertString(raw.productId, 'productId'),
-    model: assertString(raw.model, 'model'),
-    socket: assertString(raw.socketName, 'socket'),
-    memoryType: assertString(raw.memoryTypeName, 'memoryType'),
-    chipset: assertString(raw.chipsetName, 'chipset'),
-    formFactor: assertString(raw.formFactorName, 'formFactor'),
-    PCIe: assertString(raw.PCIeName, 'PCIe'),
+export function toMBResponse(
+  rawComponent: Record<string, string | number>,
+): MBResponse {
+  const componentBaseResponse = toBaseResponse(rawComponent);
+
+  const mbResponse: MBResponse = {
+    ...componentBaseResponse,
+    socket: assertString(rawComponent.socketName, 'socket'),
+    memoryType: assertString(rawComponent.memoryTypeName, 'memoryType'),
+    chipset: assertString(rawComponent.chipsetName, 'chipset'),
+    formFactor: assertString(rawComponent.formFactorName, 'formFactor'),
+    PCIe: assertString(rawComponent.PCIeName, 'PCIe'),
   };
+
+  return mbResponse;
 }

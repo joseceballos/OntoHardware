@@ -1,9 +1,10 @@
-import { ComponentType } from 'src/data/compatibility.config';
+import { ComponentKey } from 'src/data/componentType.config';
 import { PREFIXES } from './sparql.prefixes';
+import { getComponentTypeByKey } from 'src/helpers/types.converter';
 
 export function buildCompatibilityListWithComponentTypeQuery(
   componentId: string,
-  targetFamilyId: ComponentType,
+  componentKey: ComponentKey,
 ): string {
   return `
     ${PREFIXES}
@@ -12,7 +13,7 @@ export function buildCompatibilityListWithComponentTypeQuery(
       (STRAFTER(STR(?targetComponent), "#") AS ?targetComponentId)
       WHERE {
         onto:${componentId} onto:compatibleWith ?targetComponent .
-        ?targetComponent rdf:type onto:${targetFamilyId} .
+        ?targetComponent rdf:type onto:${getComponentTypeByKey(componentKey)} .
       }
       ORDER by ?targetComponentId`;
 }

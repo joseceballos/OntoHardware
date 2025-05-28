@@ -1,24 +1,20 @@
 import { Get, Param, HttpException, HttpStatus } from '@nestjs/common';
 import { FusekiService } from 'src/fuseki/fuseki.service';
-import { FieldMapping } from 'src/mapping/mapper.utils';
-import { applyMapping } from 'src/mapping/mapper.utils';
 import { buildComponentsListbyComponentType } from 'src/builders/consult.builder';
-import { mapBindingsToComponents } from 'src/fetch/component.map';
-import {
-  fetchAllComponentsBindings,
-  fetchComponentBindings,
-} from 'src/fetch/components.fetch';
+import { fetchAllComponents, fetchComponent } from 'src/fetch/components.fetch';
+import { ComponentTypeConfig } from 'src/data/componentType.config';
 
 export abstract class BaseController<T extends Record<string, any>> {
   constructor(
     protected readonly fuseki: FusekiService,
-    private readonly componentType: string,
-    private readonly mappings: FieldMapping[],
+    private readonly componentTypeConfig: ComponentTypeConfig<T>,
   ) {}
 
   @Get()
   async findAll(): Promise<T[]> {
-    const sparql = buildComponentsListbyComponentType(this.componentType);
+    const sparql = buildComponentsListbyComponentType(
+      this.componentTypeConfig.componentType,
+    );
     let uris: string[];
     try {
       const res = await this.fuseki.select(sparql);
@@ -27,31 +23,36 @@ export abstract class BaseController<T extends Record<string, any>> {
       throw new HttpException('Error listing items', HttpStatus.BAD_GATEWAY);
     }
 
-    const rawComponents = await fetchAllComponentsBindings(
-      this.fuseki,
-      this.componentType,
-      uris,
-      this.mappings,
-    );
+    try {
+      const componentResponses = await fetchAllComponents(
+        this.fuseki,
+        uris,
+        this.componentTypeConfig,
+      );
 
-    const mappedResults = mapBindingsToComponents<T>(
-      rawComponents,
-      this.mappings,
-    );
-
-    return mappedResults;
+      return componentResponses;
+    } catch {
+      throw new HttpException(
+        `Error fetching all ${this.componentTypeConfig.componentType}`,
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 
   @Get(`:id`)
   async findOne(@Param('id') id: string): Promise<T> {
-    const binding = await fetchComponentBindings(
-      this.fuseki,
-      id,
-      this.componentType,
-      this.mappings,
-    );
-
-    const mappedComponent = applyMapping<T>(id, binding, this.mappings);
-    return mappedComponent;
+    try {
+      const componentResponse = await fetchComponent(
+        this.fuseki,
+        id,
+        this.componentTypeConfig,
+      );
+      return componentResponse;
+    } catch {
+      throw new HttpException(
+        `Error fetching ${this.componentTypeConfig.componentType}/${id}`,
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 }

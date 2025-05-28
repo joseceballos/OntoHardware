@@ -1,23 +1,23 @@
-import { assertString, assertNumber } from 'src/helpers/types.converter';
+import { assertNumber, assertString } from 'src/helpers/types.converter';
+import { ComponentBaseResponse, toBaseResponse } from './base.response';
 
-export interface StorageResponse {
-  id: string;
-  productId: string;
-  model: string;
+export interface StorageResponse extends ComponentBaseResponse {
   brand: string;
   capacity: number;
   diskType: string;
 }
 
 export function toStorageResponse(
-  raw: Record<string, string | number>,
+  rawComponent: Record<string, string | number>,
 ): StorageResponse {
-  return {
-    id: assertString(raw.id, 'id'),
-    productId: assertString(raw.productId, 'productId'),
-    model: assertString(raw.model, 'model'),
-    brand: assertString(raw.brandName, 'brand'),
-    capacity: assertNumber(raw.capacity, 'capacity'),
-    diskType: assertString(raw.diskTypeName, 'diskType'),
+  const componentBaseResponse = toBaseResponse(rawComponent);
+
+  const storageResponse: StorageResponse = {
+    ...componentBaseResponse,
+    brand: assertString(rawComponent.brandName, 'brand'),
+    capacity: assertNumber(rawComponent.capacity, 'capacity'),
+    diskType: assertString(rawComponent.diskTypeName, 'diskType'),
   };
+
+  return storageResponse;
 }

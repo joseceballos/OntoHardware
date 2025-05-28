@@ -1,21 +1,24 @@
-import { assertString, assertNumber } from 'src/helpers/types.converter';
+import { assertNumber, assertString } from 'src/helpers/types.converter';
+import { ComponentBaseResponse, toBaseResponse } from './base.response';
 
-export interface PSUResponse {
-  id: string;
-  productId: string;
-  model: string;
-  TDP: number;
+export interface PSUResponse extends ComponentBaseResponse {
   certification: string;
+  TDP: number;
 }
 
 export function toPSUResponse(
-  raw: Record<string, string | number>,
+  rawComponent: Record<string, string | number>,
 ): PSUResponse {
-  return {
-    id: assertString(raw.id, 'id'),
-    productId: assertString(raw.productId, 'productId'),
-    model: assertString(raw.model, 'model'),
-    TDP: assertNumber(raw.TDP, 'TDP'),
-    certification: assertString(raw.certificationName, 'certification'),
+  const componentBaseResponse = toBaseResponse(rawComponent);
+
+  const psuResponse: PSUResponse = {
+    ...componentBaseResponse,
+    certification: assertString(
+      rawComponent.certificationName,
+      'certification',
+    ),
+    TDP: assertNumber(rawComponent.TDP, 'TDP'),
   };
+
+  return psuResponse;
 }

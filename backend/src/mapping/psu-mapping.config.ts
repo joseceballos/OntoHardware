@@ -1,6 +1,6 @@
-import { FieldMapping } from './mapper.utils';
+import { FieldMappings } from './field-mapping.config';
 
-export const PSU_FIELD_MAPPINGS: FieldMapping[] = [
+export const PSU_FIELD_MAPPINGS: FieldMappings = [
   { key: 'productId', uri: 'productId', type: 'string' },
   { key: 'model', uri: 'model', type: 'string' },
   { key: 'TDP', uri: 'PowerTDP', type: 'integer' },

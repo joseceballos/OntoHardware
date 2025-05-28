@@ -1,7 +1,7 @@
-import { ComponentType } from 'src/data/compatibility.config';
+import { ComponentType } from 'src/data/componentType.config';
 import { PREFIXES } from './sparql.prefixes';
 
-export function checkComponentType(
+export function buildCheckComponentType(
   componentId: string,
   componentType: ComponentType,
 ): string {

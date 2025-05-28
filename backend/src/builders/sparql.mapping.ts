@@ -1,10 +1,7 @@
-import { FieldMapping } from 'src/mapping/mapper.utils';
+import { FieldMappings } from 'src/mapping/field-mapping.config';
 import { PREFIXES } from './sparql.prefixes';
 
-export function buildMappingQuery(
-  id: string,
-  mappings: FieldMapping[],
-): string {
+export function buildMappingQuery(id: string, mappings: FieldMappings): string {
   const select = buildMappingSelect(mappings);
   const base = buildMappingBase(id, mappings);
   const optional = buildMappingOptional(id, mappings);
@@ -21,13 +18,13 @@ export function buildMappingQuery(
   return sparql;
 }
 
-function buildMappingSelect(mappings: FieldMapping[]): string {
+function buildMappingSelect(mappings: FieldMappings): string {
   return mappings
     .map((m) => (m.type === 'objectId' ? `?${m.key}Name` : `?${m.key}Val`))
     .join('\n');
 }
 
-function buildMappingBase(id: string, mappings: FieldMapping[]): string {
+function buildMappingBase(id: string, mappings: FieldMappings): string {
   return mappings
     .filter((m) => m.type !== 'objectId')
     .map((m) => {
@@ -42,7 +39,7 @@ function buildMappingBase(id: string, mappings: FieldMapping[]): string {
     .join('\n');
 }
 
-function buildMappingOptional(id: string, mappings: FieldMapping[]): string {
+function buildMappingOptional(id: string, mappings: FieldMappings): string {
   return mappings
     .filter((m) => m.type === 'objectId')
     .map((m) => {

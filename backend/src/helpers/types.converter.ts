@@ -1,5 +1,5 @@
-import { ComponentKey, ComponentType } from 'src/data/compatibility.config';
-import { FieldMapping } from 'src/mapping/mapper.utils';
+import { ComponentKey, ComponentType } from 'src/data/componentType.config';
+import { FieldMapping } from 'src/mapping/field-mapping.config';
 
 export type ComparatorKey = 'gt' | 'lt' | 'ge' | 'le' | 'eq';
 export type ComparatorSymbol = '>' | '<' | '>=' | '<=' | '=';

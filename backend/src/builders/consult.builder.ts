@@ -1,10 +1,10 @@
-import { FieldMapping } from 'src/mapping/mapper.utils';
 import { PREFIXES } from './sparql.prefixes';
 import { buildMappingQuery } from './sparql.mapping';
+import { FieldMappings } from 'src/mapping/field-mapping.config';
 
 export function buildComponentByIdQuery(
   id: string,
-  mappings: FieldMapping[],
+  mappings: FieldMappings,
 ): string {
   const sparql = buildMappingQuery(id, mappings);
 

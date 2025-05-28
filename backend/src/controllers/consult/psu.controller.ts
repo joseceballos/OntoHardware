@@ -2,11 +2,11 @@ import { Controller } from '@nestjs/common';
 import { FusekiService } from 'src/fuseki/fuseki.service';
 import { BaseController } from './BaseController';
 import { PSUResponse } from 'src/responses/psu.response';
-import { PSU_FIELD_MAPPINGS } from 'src/mapping/psu-mapping.config';
+import { COMPONENTS_TYPES_CONFIG } from 'src/data/componentType.config';
 
 @Controller('psu')
 export class PsuController extends BaseController<PSUResponse> {
   constructor(fuseki: FusekiService) {
-    super(fuseki, 'PSU', PSU_FIELD_MAPPINGS);
+    super(fuseki, COMPONENTS_TYPES_CONFIG.psu);
   }
 }

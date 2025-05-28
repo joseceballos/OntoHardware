@@ -1,30 +1,25 @@
 import { assertNumber, assertString } from 'src/helpers/types.converter';
+import { ComponentBaseResponse, toBaseResponse } from './base.response';
 
-export interface CPUResponse {
-  id: string;
-  productId: string;
-  model: string;
+export interface CPUResponse extends ComponentBaseResponse {
   brand: string;
   socket: string;
   cores?: number;
-  threads?: number;
   baseFrequency?: number;
-  boostFrequency?: number;
   TDP?: number;
 }
 
 export function toCPUResponse(
-  raw: Record<string, string | number>,
+  rawComponent: Record<string, string | number>,
 ): CPUResponse {
+  const componentBaseResponse = toBaseResponse(rawComponent);
   const cpuResponse: CPUResponse = {
-    id: assertString(raw.id, 'id'),
-    productId: assertString(raw.productId, 'productId'),
-    model: assertString(raw.model, 'model'),
-    brand: assertString(raw.brandName, 'brand'),
-    socket: assertString(raw.socketName, 'socket'),
-    cores: assertNumber(raw.cores, 'cores'),
-    baseFrequency: assertNumber(raw.baseFrequency, 'baseFrequency'),
-    TDP: assertNumber(raw.TDP, 'baseFrequency'),
+    ...componentBaseResponse,
+    brand: assertString(rawComponent.brandName, 'brand'),
+    socket: assertString(rawComponent.socketName, 'socket'),
+    cores: assertNumber(rawComponent.cores, 'cores'),
+    baseFrequency: assertNumber(rawComponent.baseFrequency, 'baseFrequency'),
+    TDP: assertNumber(rawComponent.TDP, 'baseFrequency'),
   };
 
   return cpuResponse;
