@@ -1,16 +1,12 @@
-import {
-  Controller,
-  NotFoundException,
-  HttpException,
-  HttpStatus,
-  Body,
-  Post,
-} from '@nestjs/common';
+import { Controller, NotFoundException, Body, Post } from '@nestjs/common';
 import { FILTER_CONFIG } from 'src/data/filter.config';
 import { FusekiService } from 'src/fuseki/fuseki.service';
-import { buildFilterQuery, FilterParams } from 'src/builders/filter.builder';
+import { FilterParams } from 'src/builders/filter.builder';
 import { getComparatorSymbolByKey } from 'src/helpers/types.converter';
-import { fetchAllComponents } from 'src/fetch/components.fetch';
+import {
+  fetchAllComponents,
+  fetchFilterComponentList,
+} from 'src/fetch/components.fetch';
 import { FilterDto } from 'src/dto/filter.dto';
 
 @Controller('filter')
@@ -44,31 +40,13 @@ export class FilterController {
       propertyValue,
     };
 
-    const sparql = buildFilterQuery(params);
+    const uris = await fetchFilterComponentList(this.fuseki, params);
 
-    let uris: string[];
-    try {
-      const res = await this.fuseki.select(sparql);
-      uris = res.results.bindings.map((b) => b.item.value);
-    } catch {
-      throw new HttpException(
-        'Error executing SPARQL filter',
-        HttpStatus.BAD_GATEWAY,
-      );
-    }
-
-    try {
-      const componentResponses = await fetchAllComponents(
-        this.fuseki,
-        uris,
-        filterData.componentTypeConfig,
-      );
-      return componentResponses;
-    } catch {
-      throw new HttpException(
-        `Error retrieving properties for ${componentKey}`,
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
+    const componentResponses = await fetchAllComponents(
+      this.fuseki,
+      uris,
+      filterData.componentTypeConfig,
+    );
+    return componentResponses;
   }
 }

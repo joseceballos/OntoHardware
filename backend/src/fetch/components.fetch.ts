@@ -1,6 +1,18 @@
-import { HttpException, HttpStatus } from '@nestjs/common';
-import { buildComponentByIdQuery } from 'src/builders/consult.builder';
-import { ComponentTypeConfig } from 'src/data/componentType.config';
+import { HttpException, HttpStatus, NotFoundException } from '@nestjs/common';
+import {
+  buildCompatibilityBetweenComponents,
+  buildCompatibilityListWithComponentTypeQuery,
+} from 'src/builders/compatible.builder';
+import {
+  buildComponentByIdQuery,
+  buildComponentsListbyComponentType,
+} from 'src/builders/consult.builder';
+import { buildFilterQuery, FilterParams } from 'src/builders/filter.builder';
+import {
+  ComponentKey,
+  ComponentType,
+  ComponentTypeConfig,
+} from 'src/data/componentType.config';
 import { FusekiService } from 'src/fuseki/fuseki.service';
 import { applyMapping } from 'src/mapping/mapper.utils';
 
@@ -80,4 +92,82 @@ export async function fetchAllComponents<T>(
     }),
   );
   return componentResponses;
+}
+
+export async function fetchComponentList(
+  fuseki: FusekiService,
+  componentType: ComponentType,
+): Promise<string[]> {
+  const sparql = buildComponentsListbyComponentType(componentType);
+  try {
+    const res = await fuseki.select(sparql);
+    const uris = res.results.bindings.map((b) => b.item.value);
+    return uris;
+  } catch {
+    throw new HttpException('Error listing items', HttpStatus.BAD_GATEWAY);
+  }
+}
+
+export async function fetchFilterComponentList(
+  fuseki: FusekiService,
+  params: FilterParams,
+): Promise<string[]> {
+  const sparql = buildFilterQuery(params);
+  try {
+    const res = await fuseki.select(sparql);
+    const uris = res.results.bindings.map((b) => b.item.value);
+    return uris;
+  } catch {
+    throw new HttpException(
+      'Error executing SPARQL filter',
+      HttpStatus.BAD_GATEWAY,
+    );
+  }
+}
+
+export async function fetchCompatibilityList(
+  fuseki: FusekiService,
+  componentId: string,
+  componentKey: ComponentKey,
+): Promise<string[]> {
+  const sparql = buildCompatibilityListWithComponentTypeQuery(
+    componentId,
+    componentKey,
+  );
+
+  try {
+    const res = await fuseki.select(sparql);
+    if (res.results.bindings.length === 0) {
+      throw new NotFoundException(
+        `Not exist compatible components for ${componentId}`,
+      );
+    }
+    const uris = res.results.bindings.map((b) => b.targetComponentId.value);
+    return uris;
+  } catch {
+    throw new HttpException(
+      'Error executing compatibility',
+      HttpStatus.BAD_GATEWAY,
+    );
+  }
+}
+
+export async function fetchCompatibilityCheck(
+  fuseki: FusekiService,
+  component1Id: string,
+  component2Id: string,
+): Promise<{ compatible: boolean }> {
+  const sparql = buildCompatibilityBetweenComponents(
+    component1Id,
+    component2Id,
+  );
+  try {
+    const res = await fuseki.ask(sparql);
+    return { compatible: res };
+  } catch {
+    throw new HttpException(
+      'Error executing compatibility check',
+      HttpStatus.BAD_GATEWAY,
+    );
+  }
 }

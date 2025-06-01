@@ -12,7 +12,6 @@ export class BuildController {
       await this.compatibilityService.validateBuildData(buildComponents);
     const individualCompatibilityResponse =
       await this.compatibilityService.checkIndividualRules(componentsChecked);
-    console.log(individualCompatibilityResponse);
     return individualCompatibilityResponse;
   }
 }
